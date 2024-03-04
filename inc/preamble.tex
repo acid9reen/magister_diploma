@@ -1,0 +1,55 @@
+\usepackage{vmargin}
+\setpapersize{A4}
+\setmarginsrb{2cm}{1.5cm}{1cm}{1.5cm}{0pt}{0mm}{0pt}{13mm}
+\usepackage{indentfirst}
+
+% Cool fonts setup
+\usepackage{fontspec}
+	\setmainfont{PT Astra Serif}
+	\setsansfont{PT Astra Serif}
+	\setmonofont[
+		Contextuals={Alternate}
+	]{FiraCode Nerd Font}
+
+% All ligatures for code listings
+\makeatletter
+\def\verbatim@nolig@list{}
+\makeatother
+
+\usepackage[english,russian]{babel}
+
+% More code listings!!!
+\usepackage{moreverb}
+
+% Math
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtools}
+
+% Refs for table of contents
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+% Images
+\usepackage{wrapfig}
+\usepackage{graphicx}
+\graphicspath{ {./img/} }
+
+% Tables
+\usepackage{multirow}
+\usepackage[table,usenames,dvipsnames]{xcolor}
+\usepackage{array}
+\newcolumntype{L}{>{\arraybackslash}m{9cm}}
+\newcolumntype{M}{>{\arraybackslash}m{4cm}}
+\newcolumntype{S}{>{\arraybackslash}m{2cm}}
+\newcolumntype{N}{>{\arraybackslash}m{6cm}}
+
+% Directory tree
+\usepackage{dirtree}

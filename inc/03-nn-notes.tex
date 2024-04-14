@@ -5,13 +5,13 @@
 Данная функция является метрикой и выражается следующими формулами:
 
 \begin{align*}
-    precision &= \frac{TP}{TP + FP}, \: recall = \frac{TP}{TP + FN}, \: \text{где} \\
-    &\begin{cases}
-        TP = \: \text{true positive} \\
-        FP = \: \text{false positive} \\
-        FN = \: \text{false negative}
-    \end{cases}, \: \text{а} \\
-    F_1score &= 2 \cdot \frac{precision \cdot recall}{precision + recall} = \frac{TP}{TP + 0.5(FP + FN)}
+	precision & = \frac{TP}{TP + FP}, \: recall = \frac{TP}{TP + FN}, \: \text{где}                        \\
+	          & \begin{cases}
+		            TP = \: \text{true positive}  \\
+		            FP = \: \text{false positive} \\
+		            FN = \: \text{false negative}
+	            \end{cases}, \: \text{а}                                                              \\
+	F_1score  & = 2 \cdot \frac{precision \cdot recall}{precision + recall} = \frac{TP}{TP + 0.5(FP + FN)}
 \end{align*}
 
 Как было отмечено выше, набор данных несбалансирован, а значит такие метрики, как,
@@ -35,23 +35,23 @@
 
 Сам алгоритм пакетной нормализации:
 \begin{align*}
-    z^{(i)} &= \gamma \otimes \hat x^{(i)} + \beta, \text{где} \\
-    \hat x^{(i)} = \frac{x^{(i)} - \mu_B}{\sqrt{\sigma^2_B + \xi}}, \qquad
-    \mu_B &= \frac{1}{m_B} \sum\limits_{i = 1}^{m_B}x^{(i)}, \qquad
-    \sigma_B^2 = \frac{1}{m_B} \sum\limits_{i = 1}^{m_B}(x^{(i)} - \mu_B)^2
+	z^{(i)} & = \gamma \otimes \hat x^{(i)} + \beta, \text{где}        \\
+	\hat x^{(i)} = \frac{x^{(i)} - \mu_B}{\sqrt{\sigma^2_B + \xi}}, \qquad
+	\mu_B   & = \frac{1}{m_B} \sum\limits_{i = 1}^{m_B}x^{(i)}, \qquad
+	\sigma_B^2 = \frac{1}{m_B} \sum\limits_{i = 1}^{m_B}(x^{(i)} - \mu_B)^2
 \end{align*}
 
 \begin{align*}
-    z^{(i)} & \: \text{ --- результат операции: это отмасштабированная и сдвинутая версия входов} \\
-    \gamma & \: \text{ --- выходной параметр --- масштаб для слоя} \\
-    \otimes & \: \text{ --- поэлементное умножение векторов} \\
-    \hat x^{(i)} & \: \text{ --- вектор отцентрированных и нормализованных входов для экземпляра} \: i \\
-    \beta & \: \text{ --- выходной параметр --- сдвиг для слоя} \\
-    \mu_B & \: \text{ --- вектор средних входа, посчитанных по всему пакету} \\
-    \sigma_B & \: \text{ --- вектор стандартных отклонений входа, так же считается по всему пакету} \\
-    x & \: \text{ --- вход} \\
-    m_B & \: \text{ --- количество элементов в пакете} \\
-    \xi & \: \text{ --- небольшое число для того, чтобы избежать деления на 0}
+	z^{(i)}      & \: \text{ --- результат операции: это отмасштабированная и сдвинутая версия входов}  \\
+	\gamma       & \: \text{ --- выходной параметр --- масштаб для слоя}                                \\
+	\otimes      & \: \text{ --- поэлементное умножение векторов}                                       \\
+	\hat x^{(i)} & \: \text{ --- вектор отцентрированных и нормализованных входов для экземпляра} \: i  \\
+	\beta        & \: \text{ --- выходной параметр --- сдвиг для слоя}                                  \\
+	\mu_B        & \: \text{ --- вектор средних входа, посчитанных по всему пакету}                     \\
+	\sigma_B     & \: \text{ --- вектор стандартных отклонений входа, так же считается по всему пакету} \\
+	x            & \: \text{ --- вход}                                                                  \\
+	m_B          & \: \text{ --- количество элементов в пакете}                                         \\
+	\xi          & \: \text{ --- небольшое число для того, чтобы избежать деления на 0}
 \end{align*}
 
 \subsection{Исключение}
@@ -81,8 +81,8 @@ Dropout или прореживание зарекомендовал себя к
 обучения нейросети.
 
 \begin{figure}[!htb]
-    \centering
-    \caption{Пример остаточной связи. F --- функция активации, x --- вход.}
-    \includegraphics[width=0.25\textwidth]{residual}
-    \label{fig:residual}
+	\centering
+	\caption{Пример остаточной связи. F --- функция активации, x --- вход.}
+	\includegraphics[width=0.25\textwidth]{residual}
+	\label{fig:residual}
 \end{figure}

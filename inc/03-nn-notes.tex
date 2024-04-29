@@ -84,7 +84,7 @@ $y_i$ --- $i$-ая компонента истины.
 Формула выглядит следующим образом:
 
 \begin{equation}
-	DICE \: Loss = 1 - \frac{y \cap \hat{y}}{y \cup \hat{y} + \epsilon}
+	DICE \: Loss = 1 - 2 \cdot \frac{y \cap \hat{y}}{y \cup \hat{y} + \epsilon}
 \end{equation}
 
 \noindent $y$ --- истина, $\hat{y}$ --- предсказание, $\epsilon$ --- небольшая

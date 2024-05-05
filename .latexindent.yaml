@@ -1,3 +1,4 @@
+---
 indentAfterItems:
   itemize: 0
   itemize*: 0
@@ -6,3 +7,12 @@ indentAfterItems:
   description: 0
   description*: 0
   list: 0
+modifyLineBreaks:
+  textWrapOptions:
+    columns: 80
+    perCodeBlockBasis: 1
+    all: 1
+  removeParagraphLineBreaks:
+    all:
+      except: [itemize]
+    beforeTextWrap: 1

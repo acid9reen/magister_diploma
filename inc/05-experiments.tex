@@ -27,7 +27,6 @@
 
 \begin{table}[ht]
 \centering
-\caption{\centering Результаты экспериментов. O --- оригинальная разметка, P --- предсказанная}
 \label{tab:results}
 	\begin{tabular}{ccccccc} \toprule
 		& \multicolumn{2}{c}{Precision} & \multicolumn{2}{c}{Recall} & \multicolumn{2}{c}{F1-score} \\
@@ -42,11 +41,12 @@
 		26ph1               & 0.98798                & 0.58380               & 0.38471             & 0.87136            & 0.55378                  & 0.69917                  \\ \midrule
 		\textbf{Среднее}    & 0.91848                & 0.81700               & 0.69786             & 0.90254            & 0.73339                  & 0.84638                  \\ \bottomrule
 	\end{tabular}
+\caption{\centering Результаты экспериментов. O --- оригинальная разметка, P --- предсказанная}
 \end{table}
 
 \begin{figure}[!htb]
 	\centering
-	\caption{Сравнение $F_1score$ оригинальной разметки и предсказанной}
 	\includegraphics[width=\textwidth]{f1score-cropped.png}
+	\caption{Сравнение $F_1score$ оригинальной разметки и предсказанной}
 	\label{fig:f1score-vs}
 \end{figure}

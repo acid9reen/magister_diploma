@@ -13,12 +13,12 @@ F1-мера учитывает как точность, так и полноту
 делает ее надежной метрикой для задач с сильным дисбалансом классов.
 
 \begin{align}
-	\text{precision} & = \frac{\text{TP}}{\text{TP} + \text{FP}}, \: \text{recall} = \frac{\text{TP}}{\text{TP} + \text{FN}}, \: \text{где} \\
-	          & \begin{cases}
-				    \text{TP} = \: \text{true positive}  \\
-					\text{FP} = \: \text{false positive} \\
-					\text{FN} = \: \text{false negative}
-	            \end{cases}, \: \text{а} \\
+	\text{precision} & = \frac{\text{TP}}{\text{TP} + \text{FP}}, \: \text{recall} = \frac{\text{TP}}{\text{TP} + \text{FN}}, \: \text{где}                               \\
+	                 & \begin{cases}
+		                   \text{TP} = \: \text{true positive}  \\
+		                   \text{FP} = \: \text{false positive} \\
+		                   \text{FN} = \: \text{false negative}
+	                   \end{cases}, \: \text{а}                                                                                                               \\
 	\text{F1-score}  & = 2 \cdot \frac{\text{precision} \cdot \text{recall}}{\text{precision} + \text{recall}} = \frac{\text{TP}}{\text{TP} + 0.5(\text{FP} + \text{FN})}
 	\label{eq:f1score}
 \end{align}

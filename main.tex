@@ -1,14 +1,25 @@
-\documentclass[oneside,notitlepage,12pt]{extreport}
+\documentclass[oneside,notitlepage,14pt]{extreport}
 \input{inc/preamble} % Подключаем преамбулу
 
 \begin{document}
+\emergencystretch 3em
+
+\begin{titlepage}
+    \includepdf[pages={1}, noautoscale, offset=25mm -25mm]{title.pdf}
+\end{titlepage}
 
 \setcounter{page}{2}
+\input{inc/00-abstract.tex}
+
 \tableofcontents
 \clearpage
 
-\input{inc/00-abstract.tex}
 \input{inc/01-introduction.tex}
+\input{inc/02-data.tex}
+\input{inc/03-nn-notes.tex}
+\input{inc/04-implementation.tex}
+\input{inc/05-experiments.tex}
+\input{inc/06-conclusion.tex}
 \input{inc/90-literature.tex}
 \input{inc/99-appendix.tex}
 
